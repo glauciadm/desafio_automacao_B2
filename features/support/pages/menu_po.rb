@@ -2,7 +2,10 @@ class MenuItens
     include Capybara::DSL
 
     def minhaVisao
-        find('a[href="/my_view_page.php"]').click
+       # find('a[href="/my_view_page.php"]').click
+       within('#sidebar')
+       find('a[href="/my_view_page.php"]').click
+      # find('.menu-text').click
     end
 
     def verTarefas

@@ -20,7 +20,18 @@ class GerenciarTarefas
         find('a[href="print_all_bug_page.php"]').click
     end
 
+    def pesquisarTarefa(idTarefa)
+        find('input[name=bug_id]').set idTarefa
+        find('input[name=bug_id]').send_keys(:enter)
+    end
 
+    def apagarTarefa
+        click_button 'Apagar'
+    end
+
+    def confirmarExclusaoTarefa
+        click_button 'Apagar Tarefas'
+    end
 
 
 end
