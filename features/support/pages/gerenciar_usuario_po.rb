@@ -34,5 +34,5 @@ class GerenciarUsuario
         click_button 'Apagar Conta'
     end
 
-
+ 
 end

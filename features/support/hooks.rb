@@ -7,6 +7,7 @@ Before do
     @categoria = GerenciarProjetos.new
     @perfil = Perfis.new
     @tarefa = GerenciarTarefas.new
+    @conta = GerenciarMinhaConta.new
     #page.current_window.resize_to(1200, 800)
     #definir resolução para o teste
 end
