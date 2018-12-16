@@ -5,6 +5,7 @@ Before do
     @projeto = GerenciarProjetos.new
     @menu = MenuItens.new
     @categoria = GerenciarProjetos.new
+    @perfil = Perfis.new
     #page.current_window.resize_to(1200, 800)
     #definir resolução para o teste
 end

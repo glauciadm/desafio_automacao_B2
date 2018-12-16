@@ -25,4 +25,8 @@ class MenuItens
         find('a[href="#"]').click
     end
 
+    def minhaConta
+        click_link 'Minha Conta'
+    end
+
 end
