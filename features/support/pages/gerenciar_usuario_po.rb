@@ -23,7 +23,6 @@ class GerenciarUsuario
     
 
     def localizarUser(nome_usuario)
-        puts nome_usuario
         click_link nome_usuario
     end
 

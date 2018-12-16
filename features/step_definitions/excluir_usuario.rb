@@ -16,5 +16,5 @@ When("abrir o cadastro do usuário {string}") do |nome_usuario|
   end
   
   Then("será exibida a mensagem {string}") do |string|
-   page.has_text?('Operação realizada com sucesso.')
+    expect(page.has_text?('Operação realizada com sucesso.')).to eq true
   end

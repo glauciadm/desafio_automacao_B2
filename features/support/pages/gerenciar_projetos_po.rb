@@ -22,6 +22,24 @@ class GerenciarProjetos
         click_button 'Adicionar projeto'
     end
 
+    def localizarProjeto(nomeProjeto)
+        click_link nomeProjeto
+    end
+
+    def apagarProjeto
+        click_button 'Apagar Projeto'
+    end
+
+    def editarProjeto(visibilidade)
+        comboVisb = find('#project-view-state')
+        comboVisb.find('option', text: visibilidade).select_option
+    end
+    
+    def atualizarProjeto
+        click_button 'Atualizar Projeto'
+    end
+
+
     def criarCategoria(nomeCat)
         find('input[name=name]').set nomeCat
     end

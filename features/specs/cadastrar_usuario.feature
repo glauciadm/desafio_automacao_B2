@@ -15,4 +15,4 @@ Feature: Cadastrar usuário
             | teste202    | teste202       | teste202@email.com | relator       |
             | teste203    | teste203       | teste203@email.com | atualizador   |
             | teste204    | teste204       | teste204@email.com | desenvolvedor |
-            | teste205    | teste204       | teste204@email.com | gerente       |
+            | teste205    | teste205       | teste205@email.com | gerente       |

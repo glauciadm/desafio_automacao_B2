@@ -16,5 +16,5 @@ When("gerenciar projetos") do
   end
   
   Then("será exibida mensagem {string}") do |string|
-    page.has_text?('Operação realizada com sucesso.')
+    expect(page.has_text?('Operação realizada com sucesso.')).to eq true
    end

@@ -12,5 +12,5 @@ Given("acessou o gerenciamento de projetos") do
   end
   
   Then("{string} é exibida na lista de categorias") do |nomeCat|
-    page.has_text?(nomeCat)
+    expect(page.has_text?(nomeCat)).to eq true
   end
