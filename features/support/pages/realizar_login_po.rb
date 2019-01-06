@@ -16,5 +16,13 @@ class LoginPage
     def password(senha)
      find('#password').set senha
     end
-    
+
+    def recuperarSenha
+        find(:css, '#login-form > fieldset > a').click
+    end
+
+    def inserirEmail(email)
+        find('#email-field').set email
+    end
+
 end

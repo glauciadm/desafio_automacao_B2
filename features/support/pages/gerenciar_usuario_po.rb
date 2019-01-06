@@ -21,7 +21,6 @@ class GerenciarUsuario
        find('.btn.btn-primary.btn-white.btn-round').click
     end
     
-
     def localizarUser(nome_usuario)
         click_link nome_usuario
     end
@@ -34,5 +33,26 @@ class GerenciarUsuario
         click_button 'Apagar Conta'
     end
 
- 
+    def pesquisarUser(nome_usuario)
+        find('#username').set nome_usuario
+        click_button 'Gerenciar Usuário'
+    end
+
+    def selecionarUser(nome_usuario)
+        click_link nome_usuario
+    end
+
+    def redefinirSenha
+        click_button 'Redefinir Senha'
+    end
+
+    def representarUser
+        click_button 'Representar Usuário'
+    end
+
+    def prosseguirRepresentacao
+        find(:css, '#main-container > div.main-content > div.page-content > div > div > div > div.alert.alert-success.center > div > a').click
+    end
+
 end
+

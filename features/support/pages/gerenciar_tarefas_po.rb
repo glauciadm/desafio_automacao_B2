@@ -33,5 +33,21 @@ class GerenciarTarefas
         click_button 'Apagar Tarefas'
     end
 
+    def enviarLembrete
+        find(:css, '#main-container > div.main-content > div.page-content > div > div:nth-child(1) > div > div.widget-body > div.widget-toolbox.padding-8.clearfix.noprint > div.btn-group.pull-left > a:nth-child(1)').click
+    end
+
+    def selecionarUserLembrete(nome_usuario)
+        comboUser = find('#recipient')
+        comboUser.find('option', text: nome_usuario).select_option
+    end
+
+    def digitarLembrete(mensagem)
+        find('#send-reminder-div > form > div > div.widget-body > div.widget-main.no-padding > div > table > tbody > tr > td.center > textarea').set mensagem
+    end
+
+    def criarLembrete
+        click_button 'Enviar'
+    end
 
 end
