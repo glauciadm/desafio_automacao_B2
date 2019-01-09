@@ -50,4 +50,8 @@ class GerenciarCampoPersonalizado
         click_button 'Vincular Campo Personalizado'
     end
 
+    def removerCampo    
+        click_button 'Remover'
+    end
+
 end
