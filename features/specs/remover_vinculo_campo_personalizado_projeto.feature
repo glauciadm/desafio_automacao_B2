@@ -3,11 +3,10 @@ Feature: Remover vínculo do campo personalizado em um projeto
 @remover_campo
 Scenario: Remover vínculo do campo personalizado em um projeto
     Given o usuário está logado no sistema
-    And possui o cadastro do campo personalizado 'campo01'
-    And o campo está vinculado a um projeto
+    And acessou o cadastro do campo personalizado 'campo01' que possui um projeto vinculado
     When remover o projeto vinculado
-    And confirmar a exclusão do vínculo
-    Then o sistema informa 'Operação realizada com sucesso.'
+    And confirmar a exclusão do projeto vínculado
+    Then o sistema irá exibir a mensagem 'Operação realizada com sucesso.'
 
 
 
