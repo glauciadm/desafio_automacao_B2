@@ -4,7 +4,7 @@ Feature: Cadastrar categoria
 Scenario: Cadastrar categoria
 	Given o usuário está logado no sistema
 	And acessou o gerenciamento de projetos
-	When informar o nome da categoria 'categoriaCat01'
+	When informar o nome da categoria 'categoriaCat02'
 	And adicionar a categoria
-	Then 'categoriaCat01' é exibida na lista de categorias
+	Then 'categoriaCat02' é exibida na lista de categorias
 

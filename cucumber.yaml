@@ -1,5 +1,5 @@
 ---
-default: -p progress -p firefox -p html
+default: -p progress -p chrome -p html
 
 #ci: -p json progress -p headless
 pretty: --format pretty
