@@ -50,4 +50,25 @@ class GerenciarTarefas
         click_button 'Enviar'
     end
 
+    def abrirTarefa(nome_tarefa)
+        click_link nome_tarefa
+    end
+
+    def textoAnotacao(anotacao)
+        find('#bugnote_text').set anotacao
+    end
+
+    def adicionarAnotacao
+        click_button 'Adicionar Anotação'
+    end
+
+    def inserirAnexoAnotacao
+        find(:css, '#bugnote-attach-files > td > div > i').click
+
+        attach_file(File.join('teste', 'teste.txt'))
+
+        #attach_file(:csv_file, File.join(RAILS_ROOT, 'features', 'upload-files', 'products_csv_ok.csv'))
+
+    end
+
 end
