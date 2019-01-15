@@ -48,6 +48,12 @@ class GerenciarProjetos
         click_button 'Adicionar Categoria'
     end
 
+    def apagarCategoria
 
+    end
+
+    def atualizarCategoria
+
+    end
 
 end

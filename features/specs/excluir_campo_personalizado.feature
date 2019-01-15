@@ -5,5 +5,5 @@ Feature: Excluir campo personalizado
         Given o usuário está logado no sistema
         And acessou o cadastro do campo personalizado 'campo02'
         When apagar campo personalizado
-        And confirmar a exclusão
+        And confirmar a exclusão do campo personalizado
         Then o campo 'campo02' não será exibido na lista de campos personalizados

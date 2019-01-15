@@ -8,7 +8,7 @@ Given("acessou o cadastro do campo personalizado {string}") do |campo_personaliz
     @campo_personalizado.apagarCampo
   end
   
-  When("confirmar a exclusão") do
+  When("confirmar a exclusão do campo personalizado") do
     @campo_personalizado.confirmarExclusao
   end
   

@@ -7,4 +7,4 @@ Scenario: Editar cadastro de categoria
     When atualizar a categoria 'categoria2019'
     And atribuir a categoria para o usuário 'juliano'
     And atualizar categoria
-    Then 
+    Then o sistema exibe na tela a mensagem 'Operação realizada com sucesso.' 
