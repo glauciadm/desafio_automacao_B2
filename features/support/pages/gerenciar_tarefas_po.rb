@@ -71,4 +71,31 @@ class GerenciarTarefas
 
     end
 
+    def filtroPrioridade(prioridade)
+        find(:css, '#show_priority_filter').click
+        comboPriori = find(:css, '#show_priority_filter_target > select')
+        comboPriori.find('option', text: prioridade).select_option
+    end
+
+    def filtroVisibilidade(visibilidade)
+        find(:css, '#view_state_filter').click
+        comboVisi = find(:css, '#view_state_filter_target > select')
+        comboVisi.find('option', text: visibilidade).select_option
+    end    
+
+    def salvarFiltroAtual
+        find(:css, '#filter > div.widget-toolbox.padding-8.clearfix > div.btn-toolbar.pull-right > div > form:nth-child(1) > input').click
+    end
+
+    def nomeFiltro(nome_filtro)
+        find('input[name=query_name').set nome_filtro
+    end
+
+    def filtroPublico
+        find(:css, '#save-filter > div.widget-body > div > form.form-inline > div:nth-child(6) > label > span').click
+    end
+
+    def salvarNomeFiltro
+        find(:css, '#save-filter > div.widget-body > div > form.form-inline > input.btn.btn-primary.btn-white.btn-round').click
+    end
 end

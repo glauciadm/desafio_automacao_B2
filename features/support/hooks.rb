@@ -10,6 +10,7 @@ Before do
     @conta = GerenciarMinhaConta.new
     @marcador = GerenciarMarcador.new
     @campo_personalizado = GerenciarCampoPersonalizado.new
+    @token = TokenAPI.new
     #page.current_window.resize_to(1200, 800)
     #definir resolução para o teste
 end

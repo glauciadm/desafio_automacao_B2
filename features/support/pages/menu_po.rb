@@ -32,4 +32,8 @@ class MenuItens
         click_link 'Minha Conta'
     end
 
+    def tokens
+        find('a[href="/api_tokens_page.php"]').click
+    end 
+
 end
