@@ -3,8 +3,8 @@ Given("acessou a lista de categorias cadastradas") do
     @categoria.gerenciarProjetos
   end
   
-  When("atualizar a categoria {string}") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  When("atualizar a categoria {string}") do |cat|
+    @categoria.atualizarCategoria(cat)
   end
   
   When("atribuir a categoria para o usuário {string}") do |string|

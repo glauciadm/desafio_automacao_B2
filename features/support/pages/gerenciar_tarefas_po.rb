@@ -63,11 +63,10 @@ class GerenciarTarefas
     end
 
     def inserirAnexoAnotacao
-        find(:css, '#bugnote-attach-files > td > div > i').click
+        filename = 'teste.txt'
+        file = File.join(Dir.pwd, filename)
 
-        attach_file(File.join('teste', 'teste.txt'))
-
-        #attach_file(:csv_file, File.join(RAILS_ROOT, 'features', 'upload-files', 'products_csv_ok.csv'))
+        find('#bugnote-attach-files > td > div').send_keys file
 
     end
 
@@ -88,7 +87,7 @@ class GerenciarTarefas
     end
 
     def nomeFiltro(nome_filtro)
-        find('input[name=query_name').set nome_filtro
+        find('input[name=query_name]').set nome_filtro
     end
 
     def filtroPublico
@@ -98,4 +97,27 @@ class GerenciarTarefas
     def salvarNomeFiltro
         find(:css, '#save-filter > div.widget-body > div > form.form-inline > input.btn.btn-primary.btn-white.btn-round').click
     end
+
+    def buttonFechar
+        click_button 'Fechar'
+    end
+
+    def formFechar(resolucao, atribuido, visibilidade, anotacao)
+        comboResolucao = find('select[name=resolution]').set resolucao
+        comboResolucao.find('option', text: resolucao).select_option
+
+        comboAtribuido = find('select[name=handler_id]').set atribuido
+        comboAtribuido.find('option', text: atribuido).select_option
+
+        if (visibilidade == true)
+            find(:css, '#bug-change-status-form > fieldset >  > div.widdivget-body > div.widget-main.no-padding > div > table > tbody > tr:nth-child(4) > td > label').click
+        end
+
+        find('#bugnote_text').set anotacao
+    end
+    
+    def fecharTarefa
+        click_button 'Fechar Tarefa'
+    end
+
 end

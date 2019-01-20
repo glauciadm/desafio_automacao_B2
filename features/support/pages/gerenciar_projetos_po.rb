@@ -52,8 +52,10 @@ class GerenciarProjetos
 
     end
 
-    def atualizarCategoria
-
+    def atualizarCategoria(cat)
+        find('table tbody tr', text: cat)
+        tr.find(:css, '#categories > div > div.widget-body > div > div > table > tbody > tr:nth-child(2) > td.center > div > div:nth-child(1) > form > fieldset > button').click
+    sleep 2
     end
 
 end
