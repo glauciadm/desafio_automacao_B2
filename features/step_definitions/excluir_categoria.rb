@@ -3,14 +3,16 @@ Given("acessou o cadastro das categorias") do
   @categoria.gerenciarProjetos
 end
 
-When("apagar o cadastro da categoria {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+When("apagar o cadastro da categoria {string}") do |cat|
+  @categoria.apagarCategoria(cat)
+  sleep 2
 end
 
-Then("o sistema exibe a mensagem {string}") do |string|
-  expect(page.has_text?(mensagem)). to eq true
+When("confirmar a exclusão da categoria selecionada") do
+  @categoria.confirmarExclusãoCategoria
+  sleep 2
 end
 
-Then("a categoria {string} não é exibida no cadastro de categoria") do |nomeCat|
-  expect(page.has_text?(nomeCat)).to eq false
+Then("a categoria {string} não é exibida no cadastro de categoria") do |cat|
+  expect(page.has_text?(cat)).to eq false
 end

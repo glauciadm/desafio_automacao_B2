@@ -48,14 +48,29 @@ class GerenciarProjetos
         click_button 'Adicionar Categoria'
     end
 
-    def apagarCategoria
-
+    def apagarCategoria(cat)
+        within('.table.table-striped.table-bordered.table-condensed.table-hover tbody tr', text: cat) do
+            click_button 'Apagar'
+        end
     end
 
-    def atualizarCategoria(cat)
-        find('table tbody tr', text: cat)
-        tr.find(:css, '#categories > div > div.widget-body > div > div > table > tbody > tr:nth-child(2) > td.center > div > div:nth-child(1) > form > fieldset > button').click
-    sleep 2
+    def confirmarExclusãoCategoria
+        find(:css, '#main-container > div.main-content > div.page-content > div > div > div.alert.alert-warning.center > form > input.btn.btn-primary.btn-white.btn-round').click
     end
 
+    def alterarCategoria(cat)
+        within('.table.table-striped.table-bordered.table-condensed.table-hover tbody tr', text: cat) do
+            click_button 'Alterar'
+        end
+    end
+
+    def atribuirUserCat(usuario)
+        comboUser = find('#proj-category-assigned-to')
+        comboUser.find('option', text: usuario ).select_option
+    end
+
+    def atualizarCategoria
+        click_button 'Atualizar Categoria'
+    end
+    
 end
