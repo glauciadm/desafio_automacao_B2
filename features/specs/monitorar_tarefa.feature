@@ -1,6 +1,8 @@
 Feature: Monitorar tarefa
 
 @monitorar_tarefa
-Scenario: Incluir usuário para monitorar tarefa
+Scenario: Monitorar tarefa
     Given o usuário está logado no sistema
-    
+    And abriu o cadastro da tarefa '0000011'
+    When monitorar tarefa
+    Then o botão 'Monitorar' não será mais exibido

@@ -6,5 +6,3 @@ Scenario: Revogar token API
     And acessou a lista de tokens API
     When revogar o token 'teste'
     Then o sistema exibe uma mensagem informando que o token 'teste' foi revogado
-
-    #

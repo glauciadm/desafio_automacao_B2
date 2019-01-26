@@ -22,6 +22,10 @@ class GerenciarProjetos
         click_button 'Adicionar projeto'
     end
 
+    def acessarProjeto
+        find(:css, '#dropdown_projects_menu > a > i').click
+    end
+
     def localizarProjeto(nomeProjeto)
         click_link nomeProjeto
     end
@@ -38,7 +42,6 @@ class GerenciarProjetos
     def atualizarProjeto
         click_button 'Atualizar Projeto'
     end
-
 
     def criarCategoria(nomeCat)
         find('input[name=name]').set nomeCat
@@ -72,5 +75,7 @@ class GerenciarProjetos
     def atualizarCategoria
         click_button 'Atualizar Categoria'
     end
+
+
     
 end

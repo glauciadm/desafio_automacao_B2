@@ -120,4 +120,30 @@ class GerenciarTarefas
         click_button 'Fechar Tarefa'
     end
 
+    def selecionarTodasTarefas
+        find(:css, '#bug_action > div > div.widget-body > div.widget-main.no-padding > div.widget-toolbox.padding-8.clearfix > div.form-inline.pull-left > label > span').click
+        sleep (2)
+    end
+
+    def moverOK
+        click_button 'OK'
+    end
+
+    def selecionarProjetoMove(nomeProjeto)
+        combo = find('select[name=project_id]').set nomeProjeto
+        combo = find('option', text: nomeProjeto).select_option
+    end
+
+    def moverTarefas
+        click_button 'Mover Tarefas'
+    end
+
+    def monitorarTarefa
+        click_button 'Monitorar'
+    end
+
+    def pararMonitoramentoTarefa
+        click_button 'Parar de Monitorar'
+    end
+
 end
