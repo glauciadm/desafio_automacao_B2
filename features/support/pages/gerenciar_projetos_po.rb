@@ -76,6 +76,8 @@ class GerenciarProjetos
         click_button 'Atualizar Categoria'
     end
 
-
+    def addEditCategoria
+        click_button 'Adicionar e editar Categoria'
+    end
     
 end

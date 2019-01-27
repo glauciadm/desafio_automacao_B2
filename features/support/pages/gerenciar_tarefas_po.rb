@@ -62,6 +62,10 @@ class GerenciarTarefas
         click_button 'Adicionar Anotação'
     end
 
+    def anotacaoPrivada
+        find(:xpath, '//*[@id="bugnote_add"]/div[2]/div[1]/div/table/tbody/tr[1]/td/label/span').click
+    end
+
     def inserirAnexoAnotacao
         filename = 'teste.txt'
         file = File.join(Dir.pwd, filename)
@@ -144,6 +148,76 @@ class GerenciarTarefas
 
     def pararMonitoramentoTarefa
         click_button 'Parar de Monitorar'
+    end
+
+    def inserirMarcador(marcador)
+        combo = find('#tag_select').set marcador
+        combo = find('option', text: marcador).select_option
+    end
+
+    def aplicarMarcador
+        find(:css, '#main-container > div.main-content > div.page-content > div > div:nth-child(1) > div > div.widget-body > div.widget-main.no-padding > div > table > tbody > tr.noprint > td > form > input.btn.btn-primary.btn-sm.btn-white.btn-round').click
+    end
+
+    def menuHamburguer
+        find(:css, '#filter > div.widget-header.widget-header-small > div:nth-child(2) > div > a > i').click
+    end
+
+    def gerenciarFiltro
+        find('a[href="manage_filter_page.php"]').click
+    end
+
+    def deletarFiltro(filtro)
+        within('table.table-striped.table-bordered.table-condensed.table-hover tbody tr', text: filtro) do
+            click_button 'Deletar'
+        end
+    end
+
+    def apagarFiltro
+        click_button 'Apagar Filtro'
+    end
+
+    def alterarFiltro(filtro)
+        within('table.table-striped.table-bordered.table-condensed.table-hover tbody tr', text: filtro) do
+            click_button 'Alterar'
+        end
+    end
+
+    def atualizarFiltro
+        click_button 'Atualizar Filtro'
+    end
+
+    def editarNomeFiltro(filtro)
+        find('input[name=filter_name]').set filtro
+    end
+
+    def marcarPegajoso
+        find(:css, '#main-container > div.main-content > div.page-content > div > div:nth-child(1) > div > div.widget-body > div.widget-main.no-padding > div > table > tfoot > tr > td > div > div:nth-child(5) > form > fieldset > input.btn.btn-primary.btn-sm.btn-white.btn-round').click
+    end
+
+    def desmarcarPegajoso
+        find(:css, '#main-container > div.main-content > div.page-content > div > div:nth-child(1) > div > div.widget-body > div.widget-main.no-padding > div > table > tfoot > tr > td > div > div:nth-child(5) > form > fieldset > input.btn.btn-primary.btn-sm.btn-white.btn-round').click
+    end
+
+    def criarClone
+        click_button 'Criar Clone'
+    end
+
+    def editarResumoTarefa(resumo)
+        find('#summary').set resumo
+    end
+
+    def confirmarTarefa
+        click_button 'Confirmar Tarefa'
+    end
+
+    def selecionarStatusTarefa(status)
+        combo = find(:css, '#main-container > div.main-content > div.page-content > div > div:nth-child(1) > div > div.widget-body > div.widget-main.no-padding > div > table > tfoot > tr > td > div > div:nth-child(3) > form > select').set status
+        combo.find('option', text: status).select_option
+    end
+    
+    def alterarStatus
+        click_button 'Alterar Status:'
     end
 
 end

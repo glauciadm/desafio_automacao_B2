@@ -1,16 +1,16 @@
-Given("abriu a tarefa {string}") do |string|
-    
+Given("abriu a tarefa {string}") do |idTarefa|
+    @tarefa.pesquisarTarefa(idTarefa)
   end
   
-  When("inserir os marcadores {string} e {string}") do |string, string2|
-    
+  When("inserir o marcador {string}") do |marcador|
+    @tarefa.inserirMarcador(marcador)
   end
   
-  When("aplicar marcadores") do
-    
+  When("aplicar marcador") do
+    @tarefa.aplicarMarcador
   end
   
-  Then("os marcadores {string} e {string} serão exibidos na sessão {string}") do |string, string2, string3|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("o marcador {string} será exibido na sessão Marcadores") do |marcador|
+    #('.table.table-bordered.table-condensed tbody tr')
+    expect(page.has_text?(marcador)).to eq true
   end
-  

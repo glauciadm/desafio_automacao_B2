@@ -1,11 +1,3 @@
- Given("o usuário administrador está logado no sistema") do
-    @login_page.acess
-    @login_page.user('administrator')
-    @login_page.autentication
-    @login_page.password('duarte')
-    @login_page.autentication
-  end
-  
   Given("acessou o gerenciamento de usuários") do
     @menu.gerenciar
     @user.gerenciarUser
@@ -23,6 +15,5 @@
   end
   
   Then("será exibida a mensagem com {string} e {string}") do |nomeUsuario, nivelAcesso|
-    expect(page.has_text?('Usuario ' + nomeUsuario + ' criado com um nível de acesso de ' + nivelAcesso )). to eq true
+    expect(page.has_text?('Usuário ' +nomeUsuario+ ' criado com um nível de acesso de ' +nivelAcesso)). to eq true 
   end
-  

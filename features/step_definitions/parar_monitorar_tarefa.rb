@@ -1,5 +1,4 @@
 Given("pesquisou a tarefa {string}") do |idTarefa|
-    @menu.verTarefas
     @tarefa.pesquisarTarefa(idTarefa)
   end
   

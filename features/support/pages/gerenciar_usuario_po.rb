@@ -54,5 +54,28 @@ class GerenciarUsuario
         find(:css, '#main-container > div.main-content > div.page-content > div > div > div > div.alert.alert-success.center > div > a').click
     end
 
+    def desabilitarUser
+        find(:css, '#edit-user-form > div > div.widget-body > div.widget-main.no-padding > div > div > table > tbody > tr:nth-child(5) > td:nth-child(2) > label > span').click
+    end
+
+    def atribuirProjeto(projeto)
+        combo = find('#add-user-project-id')
+        combo.find('option', text: projeto).select_option
+    end
+
+    def adicionarUsuarioProjeto
+        click_button 'Adicionar Usuário'
+    end
+
+    def removerUsuarioProjeto(projeto)
+        within('table.table-bordered.table-condensed.table-striped tbody tr', text: 'Projetos Atribuídos') do
+            click_button 'Remover'
+        end
+    end
+
+    def confirmarRemocaoUsuarioProjeto
+        click_button 'Remover Usuário'
+    end
+
 end
 
