@@ -3,7 +3,7 @@ Feature: Fechar tarefa
     @fechar_tarefa
     Scenario Outline: Fechar tarefa aberta
         Given o usuário está logado no sistema
-        And acessou a tarefa '0000005'
+        And acessou a tarefa '0000015'
         When fechar a tarefa
         And preencher o formulário de encerramento "<resolucao>", "<atribuido>", "<visibilidade>", "<anotacao>"
         And fechar tarefa

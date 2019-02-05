@@ -7,4 +7,4 @@ Scenario: Excluir perfil
     When informar que deseja apagar um perfil
     And selecionar o perfil 'moto g Android 8.1'
     And salvar as informações
-    Then o perfil será apagado
+    Then o perfil 'moto g Android 8.1' será apagado

@@ -2,7 +2,7 @@ class Perfis
     include Capybara::DSL
 
     def menuPerfis
-        find('a[href="/account_prof_menu_page.php"]').click
+        find('a[href="/manage_prof_menu_page.php"]').click     
     end
 
     def preencherCampos(plataforma, so, versao)

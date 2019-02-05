@@ -15,5 +15,5 @@
   end
   
   Then("será exibida a mensagem com {string} e {string}") do |nomeUsuario, nivelAcesso|
-    expect(page.has_text?('Usuário ' +nomeUsuario+ ' criado com um nível de acesso de ' +nivelAcesso)). to eq true 
+    expect(page.has_text?('Usuário ' +nomeUsuario+ ' criado com um nível de acesso de ' +nivelAcesso)).to eq true 
   end

@@ -16,7 +16,8 @@ Given("acessou o cadastro de perfís") do
     @perfil.enviarInfo
   end
 
-  Then("o perfil será apagado") do
-   
+  Then("o perfil {string} será apagado") do |perfil|
+    combo = find('#select-profile')
+    expect(combo.has_text?(perfil)).to eq false  
   end
   

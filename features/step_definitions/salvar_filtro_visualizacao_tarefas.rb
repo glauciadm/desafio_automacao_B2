@@ -27,7 +27,8 @@ Given("acessou a visualização de tarefas cadastradas") do
     sleep(2)
   end 
   
-  Then("o filtro criado {string} estará selecionado no campo de seleção do filtro") do |string|
-    pending # Write code here that turns the phrase above into concrete actions
+  Then("o filtro criado {string} estará selecionado no campo de seleção do filtro") do |nome_filtro|
+    combo = find(:css, '#filter-queries-form > select')
+    expect(combo.has_text?(nome_filtro)).to eq true 
   end
   

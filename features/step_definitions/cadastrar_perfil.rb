@@ -1,7 +1,6 @@
-Given("acessou minha conta") do
-    @menu.administrator
-    @menu.minhaConta
-  end
+  Given("acessou o menu de gerenciamento") do
+    @menu.gerenciar
+  end 
   
   When("acessar o cadastro de perfís") do
     @perfil.menuPerfis
@@ -15,6 +14,7 @@ Given("acessou minha conta") do
     @perfil.adicionarPerfil
   end
 
-  Then("o perfil será criado") do
-    
+  Then("o {string} do perfil criado será exibido na lista de seleção de perfis") do |plataforma|
+    combo = find('#select-profile')
+    expect(combo.has_text?(plataforma)). to eq true 
   end
