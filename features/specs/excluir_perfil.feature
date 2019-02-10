@@ -5,6 +5,6 @@ Scenario: Excluir perfil
     Given o usuário está logado no sistema
     And acessou o cadastro de perfís
     When informar que deseja apagar um perfil
-    And selecionar o perfil 'moto g Android 8.1'
+    And selecionar o perfil 'moto x Android 8.0'
     And salvar as informações
-    Then o perfil 'moto g Android 8.1' será apagado
+    Then o perfil 'moto x Android 8.0' será apagado

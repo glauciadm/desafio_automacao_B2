@@ -11,10 +11,10 @@ Feature: Cadastrar projeto
 
         Examples:
             | nomeProjeto | estado          | visibilidade | descricao |
-            | projeto11   | desenvolvimento | privado      | projeto11 |
-            | projeto12   | release         | privado      | projeto12 |
-            | projeto13   | estável         | público      | projeto13 |
-            | projeto14   | obsoleto        | público      | projeto14 |
+            | projetoX    | desenvolvimento | privado      | projetoX  |
+            | projetoY    | release         | privado      | projetoY  |
+            | projetoW    | estável         | público      | projetoW  |
+            | projetoZ    | obsoleto        | público      | projetoZ  |
 
 
 

@@ -1,6 +1,5 @@
 Given("acessou o cadastro de perfís") do
-    @menu.administrator
-    @menu.minhaConta
+    @menu.gerenciar
     @perfil.menuPerfis
   end
   

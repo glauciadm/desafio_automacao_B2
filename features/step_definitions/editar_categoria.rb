@@ -5,12 +5,10 @@ Given("acessou a lista de categorias cadastradas") do
   
   When("atualizar a categoria {string}") do |cat|
     @categoria.alterarCategoria(cat)
-    sleep (2)
   end
   
   When("atribuir a categoria para o usuário {string}") do |usuario|
     @categoria.atribuirUserCat(usuario)
-    sleep (2)
   end
   
   When("atualizar categoria") do

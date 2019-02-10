@@ -3,7 +3,7 @@ Feature: Enviar lembrete de uma tarefa
     @lembrete
     Scenario: Enviar lembrete de uma tarefa
         Given o usuário está logado no sistema
-        And acessou o cadastro da tarefa de id '0000013'
+        And acessou o cadastro da tarefa de id '0000021'
         When enviar um lembrete
         And selecionar o usuário 'administrator'
         And inserir a mensagem 'tarefa em atraso'

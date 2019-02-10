@@ -9,7 +9,7 @@ Feature: Cadastrar tarefa
         Then será exibida a mensagem 'Operação realizada com sucesso.'
 
         Examples:
-            | categoria                         | gravidade | prioridade | resumo   | descricao |
-            | [Todos os Projetos] novacategoria | pequeno   | normal     | tarefa07 | tarefa07  |
-            | [Todos os Projetos] General       | grande    | baixa      | tarefa08 | tarefa08  |
-            | [Todos os Projetos] categoria2018 | recurso   | urgente    | tarefa09 | tarefa09  |
+            | categoria                   | gravidade | prioridade | resumo   | descricao |
+            | [Todos os Projetos] General | pequeno   | normal     | tarefa04 | tarefaX   |
+            | [Todos os Projetos] General | grande    | baixa      | tarefa05 | tarefaY   |
+            | [Todos os Projetos] General | recurso   | urgente    | tarefa06 | tarefaZ   |

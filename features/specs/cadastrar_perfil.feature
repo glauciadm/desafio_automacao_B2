@@ -11,5 +11,5 @@ Feature: Cadastrar perfil
 
         Examples:
             | plataforma | so      | versao |
-            | iphone 8   | iOS     | 12.1   |
-            | moto x     | Android | 8.0    |
+            | iphone 7   | iOS     | 12.1   |
+            | zenfone    | Android | 8.1    |

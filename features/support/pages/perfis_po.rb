@@ -17,7 +17,7 @@ class Perfis
 
     def apagar
       # find(:xpath, '//*[@id="account-profile-update-form"]/div/div[2]/div[1]/div/table/tbody/tr[3]/td[2]/label/span').click
-        find(:css,'#account-profile-update-form > div > div.widget-body > div.widget-main.no-padding > div > table > tbody > tr:nth-child(3) > td:nth-child(2) > label > span').click
+        find(:css,'#account-profile-update-form > div > div.widget-body > div.widget-main.no-padding > div > table > tbody > tr:nth-child(2) > td:nth-child(2) > label > span').click
     end
 
     def enviarInfo

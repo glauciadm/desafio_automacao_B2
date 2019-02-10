@@ -4,9 +4,9 @@ Feature: Adicionar e editar categoria
     Scenario: Adicionar e editar categoria
         Given o usuário está logado no sistema
         And abriu o gerenciamento de projetos
-        When inserir o nome da categoria 'lastcategoria'
+        When inserir o nome da categoria 'newcategoria'
         And adicionar e editar categoria
         And atribuir a nova categoria ao usuario 'juliano'
         And atualizar a categoria
-        Then a categoria criada 'lastcategoria' é exibida na lista de categorias
+        Then a categoria criada 'newcategoria' é exibida na lista de categorias
 

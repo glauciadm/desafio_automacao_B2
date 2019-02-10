@@ -10,8 +10,8 @@ Feature: Cadastrar usuário
         Then será exibida a mensagem com "<nomeUsuario>" e "<nivelAcesso>"
 
         Examples:
-            | nomeUsuario | nomeVerdadeiro | email              | nivelAcesso   |
-            | teste43     | teste43        | teste43@email.com  | visualizador  |
-            | teste202    | teste202       | teste202@email.com | relator       |
-            | teste204    | teste204       | teste204@email.com | desenvolvedor |
-            | teste205    | teste205       | teste205@email.com | gerente       |
+            | nomeUsuario | nomeVerdadeiro | email            | nivelAcesso   |
+            | user01      | user01         | user01@email.com | visualizador  |
+            | user02      | user02         | user02@email.com | relator       |
+            | user03      | user03         | user03@email.com | desenvolvedor |
+            | user04      | user04         | user04@email.com | gerente       |

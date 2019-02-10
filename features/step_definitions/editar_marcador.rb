@@ -19,7 +19,6 @@ Given("acessou cadastro de marcadores") do
     @marcador.atualizarMarcador
   end
 
-
   Then("será exibida a tela com o novo nome {string}") do |novo_nome|
     expect(page.has_text?('Detalhes do marcador: ' + novo_nome)). to eq true
   end

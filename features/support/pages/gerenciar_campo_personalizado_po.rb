@@ -28,7 +28,7 @@ class GerenciarCampoPersonalizado
         comboAcesso = find('#custom-field-access-level-rw')
         comboAcesso.find('option', text: acessoEscrita).select_option
 
-        if (mostrarAoCriarTarefa = true) 
+        if (mostrarAoCriarTarefa == true) 
         find(:css, '#manage-custom-field-update-form > div > div.widget-body > div > div > table > tbody > tr:nth-child(11) > td:nth-child(2) > label > span').click
         end 
     end

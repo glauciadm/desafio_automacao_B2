@@ -14,7 +14,7 @@
     @perfil.adicionarPerfil
   end
 
-  Then("o {string} do perfil criado será exibido na lista de seleção de perfis") do |plataforma|
+  Then("o perfil {string} criado será exibido na lista de seleção de perfis") do |plataforma|
     combo = find('#select-profile')
     expect(combo.has_text?(plataforma)). to eq true 
   end

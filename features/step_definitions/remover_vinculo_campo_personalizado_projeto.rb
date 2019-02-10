@@ -7,8 +7,8 @@
   When("remover o projeto vinculado") do
     @campo_personalizado.removerProjetoVinculado
   end
-  
-  When("confirmar a exclusão do projeto vínculado") do
+
+  When("confirmar a exclusão do projeto vinculado") do
     @campo_personalizado.confirmarExclusaoVinculo
   end
   

@@ -6,7 +6,7 @@ Feature: Editar campo personalizado
         And abriu o cadastro do campo personalizado "<campo>"
         When preencher os campos "<tipo>", "<acessoEscrita>", "<mostrarAoCriarTarefa>"
         And atualizar campo personalizado
-        Then o campo atualizado 'campo02' será exibido na lista de campos personalizados
+        Then o campo atualizado "<campo>" será exibido na lista de campos personalizados
 
         Examples:
             | campo   | tipo   | acessoEscrita | mostrarAoCriarTarefa |

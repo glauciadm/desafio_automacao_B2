@@ -1,6 +1,5 @@
 Given("acessou cadastro de perfis") do
-    @menu.administrator
-    @menu.minhaConta
+    @menu.gerenciar
     @perfil.menuPerfis
   end
   
@@ -14,7 +13,6 @@ Given("acessou cadastro de perfis") do
 
   When("atualizar os campos para {string}, {string}") do |os, descricao|
     @perfil.editarCampos(os, descricao)
-    sleep(2)
   end
   
   When("atualizar o perfil") do
@@ -22,6 +20,6 @@ Given("acessou cadastro de perfis") do
   end
   
   Then("o sistema será direcionado para a pagina de cadastro de perfil") do
-    expect(page).to have_current_path('http://mantis.glaucia.base2.com.br/account_prof_menu_page.php', url: true)
+    expect(page).to have_current_path('http://mantis.glaucia.base2.com.br/manage_prof_menu_page.php', url: true)
   end
   
