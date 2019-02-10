@@ -10,6 +10,6 @@ Feature: Cadastrar tarefa
 
         Examples:
             | categoria                   | gravidade | prioridade | resumo   | descricao |
-            | [Todos os Projetos] General | pequeno   | normal     | tarefa04 | tarefaX   |
-            | [Todos os Projetos] General | grande    | baixa      | tarefa05 | tarefaY   |
-            | [Todos os Projetos] General | recurso   | urgente    | tarefa06 | tarefaZ   |
+            | [Todos os Projetos] General | pequeno   | normal     | tarefa07 | tarefaX   |
+            | [Todos os Projetos] General | grande    | baixa      | tarefa08 | tarefaY   |
+            | [Todos os Projetos] General | recurso   | urgente    | tarefa09 | tarefaZ   |

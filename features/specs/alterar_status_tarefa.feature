@@ -8,4 +8,4 @@ Scenario: Alterar status de uma tarefa
     And alterar status
     And inserir a anotação da tarefa 'tarefa confirmada'
     And confirmar tarefa
-    Then o 'Estado' da tarefa será alterado para 'confirmado'
+    Then o estado da tarefa será ' confirmado'

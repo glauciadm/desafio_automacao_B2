@@ -3,6 +3,6 @@ Feature: Marcar tarefa como pegajosa
     @tarefa_pegajosa
     Scenario: Marcar tarefa como pegajosa
         Given o usuário está logado no sistema
-        When acessar a tarefa de número '0000021'
+        When acessar a tarefa de número '0000027'
         And marcar como pegajosa
         Then o botão 'Marcar como Pegajoso' não será exibido

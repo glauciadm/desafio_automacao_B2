@@ -12,6 +12,7 @@ Given("acessou cadastro do usuário {string}") do |nome_usuario|
     @user.prosseguirRepresentacao
   end
   
-  Then("o sistema estará logado com o usuário {string}") do |string|
-    #validar nome do usuário logado
+  Then("o sistema estará logado com o usuário {string}") do |nome_usuario|
+    user = find('.user-info')
+    expect(user.has_text?(nome_usuario)).to eq true
   end

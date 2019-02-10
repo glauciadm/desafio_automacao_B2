@@ -18,7 +18,6 @@ Given("pesquisou pela tarefa {string}") do |idTarefa|
     @tarefa.confirmarTarefa
   end
   
-  Then("o {string} da tarefa será alterado para {string}") do |title, status|
-    tr = find('table.table-bordered.table-condensed tbody tr th', text: title) 
-    expect(tr.has_text?(status)). to eq true
+  Then("o estado da tarefa será {string}") do |status|
+    expect(page.has_text?(status)). to eq true
   end

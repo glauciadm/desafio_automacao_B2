@@ -15,6 +15,5 @@ Given("acessou a tarefa {string}") do |idTarefa|
   end
   
   Then("o estado da tarefa será alterado para {string}") do |status|
-    tr = find('.table.table-bordered.table-condensed tbody tr th.bug-status category') 
-    expect(tr.has_text?(status)).to eq true
+    expect(page.has_text?(status)).to eq true
   end
