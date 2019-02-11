@@ -15,7 +15,3 @@ Feature: Cadastrar projeto
             | projetoY    | release         | privado      | projetoY  |
             | projetoW    | estável         | público      | projetoW  |
             | projetoZ    | obsoleto        | público      | projetoZ  |
-
-
-
-

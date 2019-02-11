@@ -11,4 +11,4 @@ Feature: Editar campo personalizado
         Examples:
             | campo   | tipo   | acessoEscrita | mostrarAoCriarTarefa |
             | campo01 | Data   | desenvolvedor | true                 |
-            | campo02 | String | visualizador  | true                 |
+            | campo02 | E-Mail | relator       | true                 |

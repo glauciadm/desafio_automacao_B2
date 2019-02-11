@@ -24,7 +24,6 @@ Given("acessou a visualização de tarefas cadastradas") do
 
   When("salvar filtro") do
     @tarefa.salvarNomeFiltro
-    sleep(2)
   end 
   
   Then("o filtro criado {string} estará selecionado no campo de seleção do filtro") do |nome_filtro|

@@ -4,7 +4,7 @@ Feature: Desabilitar usuário
 Scenario: Desabilitar usuário cadastrado
     Given o usuário está logado no sistema
     And acessou gerenciamento de usuário
-    When acessar o usuário 'maria'
+    When acessar o usuário 'joaquina'
     And desabilitar o usuário
     And atualizar usuário
     Then mensagem exibida 'Operação realizada com sucesso.'

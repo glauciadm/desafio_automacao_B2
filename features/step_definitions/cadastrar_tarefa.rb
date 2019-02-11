@@ -9,3 +9,7 @@ When("acessar o menu de criar tarefas") do
   When("criar nova tarefa") do
     @tarefa.criarNovaTarefa
   end
+
+  Then("será informada a mensagem {string}") do |mensagem|
+    expect(page.has_text?(mensagem)).to eq true
+   end

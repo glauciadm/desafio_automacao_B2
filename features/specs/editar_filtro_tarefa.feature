@@ -5,7 +5,7 @@ Feature: Editar filtro tarefa
         Given o usuário está logado no sistema
         And visualizou tarefas
         When gerenciar filtro
-        And alterar o filtro 'filtro01'
+        And alterar o filtro 'filtro02'
         And alterar o nome do filtro para 'filtroatualizado'
         And atualizar filtro
         Then o filtro 'filtroatualizado' será exibido na tela com o novo nome

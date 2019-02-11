@@ -10,7 +10,7 @@ Feature: Cadastrar campo personalizado
 
         Examples:
             | campoPersonalizado |
-            | campo10            |
+            | campo06            |
             | campo07            |
             | campo08            |
             | campo09            |

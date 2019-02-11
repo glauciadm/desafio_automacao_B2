@@ -3,7 +3,7 @@ Feature: Logar com senha incorreta
 @senha_incorreta
 Scenario: Realizar login com senha incorreta
     Given o usuário acessou tela de login
-    And inseriu o usuário 'glaucia'
+    And inseriu o usuário 'luiz'
     And enviou os dados
     When inserir a senha 'machado'
     And enviar os dados

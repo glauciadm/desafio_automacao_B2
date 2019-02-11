@@ -5,7 +5,7 @@ Feature: Excluir filtro tarefa
         Given o usuário está logado no sistema
         And visualizou as tarefas
         When gerenciar filtros
-        And deletar o filtro 'filtro02'
+        And deletar o filtro 'filtro01'
         And apagar filtro
         Then é informado 'Operação realizada com sucesso.'
-        And o filtro 'filtro02' não é listado nos filtros disponíveis
+        And o filtro 'filtro01' não é listado nos filtros disponíveis

@@ -15,6 +15,6 @@ When("gerenciar projetos") do
     @projeto.addProjeto
   end
   
-  Then("será exibida mensagem {string}") do |string|
-    expect(page.has_text?('Operação realizada com sucesso.')).to eq true
+  Then("será exibida mensagem {string}") do |mensagem|
+    expect(page.has_text?(mensagem)).to eq true
    end

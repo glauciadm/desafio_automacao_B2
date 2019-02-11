@@ -7,7 +7,7 @@ Scenario: Salvar filtro atual
     When selecionar 'baixa' no filtro de prioridade
     And visibilidade igual a 'público'
     And salvar o filtro atual
-    And informar o nome do filtro 'filtro04'
+    And informar o nome do filtro 'filtro03'
     And marcar o filtro como público
     And salvar filtro
-    Then o filtro criado 'filtro04' estará selecionado no campo de seleção do filtro
+    Then o filtro criado 'filtro03' estará selecionado no campo de seleção do filtro
